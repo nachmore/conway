@@ -6,6 +6,10 @@ module.exports = function(grunt) {
         src: 'core/*',
         dest: 'public/js/'
       },
+      ClientSocketIo: {
+        src: 'node_modules/socket.io-client/dist/socket.io.js',
+        dest: 'public/js/lib/socket.io.js',
+      },
       server: {
         src: 'core/*',
         dest: 'app/'
@@ -32,7 +36,7 @@ module.exports = function(grunt) {
           name: 'main',
           out: 'public/js/main-built.js',
           paths: {
-              'socket.io': 'https://cdn.socket.io/socket.io-1.0.4'
+              'socket.io': 'https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js'
           }
         }
       }
